@@ -51,14 +51,14 @@ function push_lib () {
 			adb push $OUT$lib $target
 
 			# run retry loop if push still fail after remount
-			if [$? != 0 ]; then
+			if [ $? != 0 ]; then
 				retry=1
 			fi
 			;;
 		*)
 			echo -e "\e[31m$output\e[0m"
 			retry=1
-		;;
+			;;
 	esac
 
 	# loop of ask user to retry push lib
