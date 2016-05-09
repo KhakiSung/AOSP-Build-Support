@@ -1,4 +1,4 @@
-# AOSP-Build-Support version 1.0.3
+# AOSP-Build-Support version 1.0.4
 
 Run
   1. build Android Open Source Project(AOSP) code 
@@ -14,6 +14,7 @@ with in one command
     -s, --snapshot          - Use current libs in dir PRODUCT_OUT/system as snapshot for compare standard
     -l, --lib=SNAPSHOT_DIR  - Where compare libs standard put, default is PRODUCT_OUT/backup
                               Support relative/absolute path. Root dir is PRODUCT_OUT/
+    -v, --verbose           - more log to stdout
 
 ### Recommand install step:
   1. add alias to `~/.bashrc`  
@@ -30,3 +31,7 @@ with in one command
   4. ask user to make sure these diff lib is user need (If don't want confirm, add `-a`)  
   (Diff libs are default select, others are unselected which are build output but binary compare same with copies)
   5. push libs to device
+
+##### testing environment:
+- ubuntu 14.04 LTS
+- gnome terminal 3.6.2
